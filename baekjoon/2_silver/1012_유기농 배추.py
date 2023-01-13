@@ -38,9 +38,7 @@ for _ in range(T):
         graph.add((X, Y))
 
     cnt = 0
-    for now in graph:
-        x = now[0]
-        y = now[1]
+    for x, y in graph:
         if not visited[x][y]:
             bfs(x, y)
             cnt += 1
@@ -82,9 +80,7 @@ for _ in range(T):
         graph.add((X, Y))
     
     cnt = 0
-    for now in graph:
-        x = now[0]
-        y = now[1]
+    for x, y in graph:
         if not visited[x][y]:
             dfs(x, y)
             cnt += 1
