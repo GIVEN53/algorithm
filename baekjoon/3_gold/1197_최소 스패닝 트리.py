@@ -18,7 +18,8 @@ def bfs(start):
         min_weight += weight
         visited[now] = True
         for next in graph[now]:
-            heappush(q, next)
+            if not visited[next[1]]:
+                heappush(q, next)
     
     return min_weight
 
